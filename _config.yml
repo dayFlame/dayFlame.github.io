@@ -2,32 +2,12 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Header
-menu:
-  首页: /#blog
-  关于: /about
-  归档: /archive
-
-# Site favicon
-favicon: /favicon.png
-
-# Site logo
-# logo: /avatar.png
-
-# Enable Mathjax
-mathjax: true
-
-# Enable awesome-toc
-awesome_toc: true
-
-# Enable githubRepoWidget
-github_repo_widget: false
-
 # Site
-title: lzhou's blog
-subtitle:
-description:
+title: lzhou的博客
+subtitle: 睡觉不踏实，胃口很好
+description: 北京邮电大学11级，研究生在读，目前写论文，找实习中
 author: lzhou
+keywords: "Java,Python,后端,hive,mapreduce,storm"
 language:
 timezone:
 
@@ -47,6 +27,43 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: false
+
+# 是否开启动画效果
+animate: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
+# Miscellaneous
+google_analytics: ''
+favicon: /favicon.png
+
+#你的头像url
+avatar:
+
+#是否开启分享
+share_jia: true
+share_addthis: false
+
+# Disqus
+duoshuo: lzhou
+
+smart_menu:
+  innerArchive: '所有文章'
+  tagcloud: '标签'
+  friends: '友链'
+  aboutme: '关于我'
+ 
+friends:
+  友情链接1: http://localhost:4000/
+  友情链接2: http://localhost:4000/
+
+aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -84,17 +101,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: huno
+theme: yilla
 
-# Disqus
-disqus_shortname: letian
-
-# Duoshuo
-duoshuo_shortname: letian
-
-# Social
-social:
-  github: dayFlame
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
