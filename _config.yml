@@ -40,11 +40,11 @@ animate: true
 open_in_new: false
 
 # Miscellaneous
-google_analytics: ''
-favicon: /favicon.png
+# google_analytics: ''
+# favicon: /favicon.png
 
 #你的头像url
-avatar:
+# avatar: 
 
 #是否开启分享
 share_jia: true
@@ -60,8 +60,9 @@ smart_menu:
   aboutme: '关于我'
  
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
+  友情链接1: http://www.bupt.edu.cn/
+  友情链接2: http://int.bupt.edu.cn/
+  友情链接2: https://bbs.byr.cn
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
@@ -102,7 +103,6 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: yilla
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
