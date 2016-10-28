@@ -2,11 +2,32 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+# Header
+menu:
+  首页: /#blog
+  关于: /about
+  归档: /archive
+
+# Site favicon
+favicon: /favicon.png
+
+# Site logo
+# logo: /avatar.png
+
+# Enable Mathjax
+mathjax: true
+
+# Enable awesome-toc
+awesome_toc: true
+
+# Enable githubRepoWidget
+github_repo_widget: false
+
 # Site
-title: Hexo
+title: lzhou's blog
 subtitle:
 description:
-author: John Doe
+author: lzhou
 language:
 timezone:
 
@@ -63,7 +84,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: huno
+
+# Disqus
+disqus_shortname: letian
+
+# Duoshuo
+duoshuo_shortname: letian
+
+# Social
+social:
+  github: dayFlame
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
