@@ -4,10 +4,9 @@
 
 # Site
 title: lzhou的博客
-subtitle: 睡觉不踏实，胃口很好
-description: 北京邮电大学11级，研究生在读，目前写论文，找实习中
+subtitle: 但行好事，莫问前程
+description: 北京邮电大学11级，研究生在读
 author: lzhou
-keywords: "Java,Python,后端,hive,mapreduce,storm"
 language:
 timezone:
 
@@ -51,9 +50,9 @@ share_jia: true
 share_addthis: false
 
 # comment
-duoshuo:
-  enable: true
-  short_name: lzhou
+duoshuo: lzhou
+#  enable: true
+#  short_name: lzhou
 
 smart_menu:
   innerArchive: '所有文章'
@@ -66,7 +65,7 @@ friends:
   友情链接2: http://int.bupt.edu.cn/
   友情链接3: https://bbs.byr.cn
 
-aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+aboutme: 北京邮电大学11级，研究生在读<br>目前在某国企打杂，准备找实习中，目标后端<br><br>很惭愧<br>只做了一点微小的工作<br>谢谢大家
 
 baidu_tongji: true
 
