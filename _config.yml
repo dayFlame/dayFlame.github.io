@@ -44,14 +44,16 @@ open_in_new: false
 # favicon: /favicon.png
 
 #你的头像url
-# avatar: 
+avatar: "http://7xphlo.com1.z0.glb.clouddn.com/kakaxi.jpg"
 
 #是否开启分享
 share_jia: true
 share_addthis: false
 
-# Disqus
-duoshuo: lzhou
+# comment
+duoshuo:
+  enable: true
+  short_name: lzhou
 
 smart_menu:
   innerArchive: '所有文章'
@@ -65,6 +67,8 @@ friends:
   友情链接3: https://bbs.byr.cn
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+
+baidu_tongji: true
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -102,7 +106,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilla
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
