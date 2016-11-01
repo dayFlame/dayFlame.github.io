@@ -32,42 +32,6 @@ excerpt_link: more
 fancybox: true
 mathjax: false
 
-# 是否开启动画效果
-animate: true
-
-# 是否在新窗口打开链接
-open_in_new: false
-
-# Miscellaneous
-# google_analytics: ''
-# favicon: /favicon.png
-
-#你的头像url
-avatar: "http://7xphlo.com1.z0.glb.clouddn.com/kakaxi.jpg"
-
-#是否开启分享
-share_jia: true
-share_addthis: false
-
-# comment
-duoshuo: lzhou
-#  enable: true
-#  short_name: lzhou
-
-smart_menu:
-  innerArchive: '所有文章'
-  tagcloud: '标签'
-  friends: '友链'
-  aboutme: '关于我'
- 
-friends:
-  友情链接1: http://www.bupt.edu.cn/
-  友情链接2: http://int.bupt.edu.cn/
-  友情链接3: https://bbs.byr.cn
-
-aboutme: 北京邮电大学11级，研究生在读<br>目前在某国企打杂，准备找实习中，目标后端<br><br>很惭愧<br>只做了一点微小的工作<br>谢谢大家
-
-baidu_tongji: true
 
 # Writing
 new_post_name: :title.md # File name of new posts
