@@ -14,7 +14,7 @@ public boolean equals(Object obj) {
 ```
 可以看出，原始的equals方法是和==一样的。
 <!-- more -->
-###基本数据类型
+### 基本数据类型
 对于byte,char,int,float,boolean等基本数据类型，==比较的是它们存储的“值”。除了他们的包装类型（Integer,Float，Byte等），它们无法使用equals方法。
 
 ### 对象
