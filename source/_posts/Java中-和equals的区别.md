@@ -39,7 +39,7 @@ Integer中用到了缓存，在被自动装箱且在[-128,127]之间的情况下
 	System.out.println(c.equals(d));  //true	
 ```
 String也比较特殊
-```
+``` Java
 //"loveu"是字符串常量，存放在常量池里，共用1块内存空间，
 //所以foo1和bar1内存地址相同，== 结果为true。
 //String类里的equals方法已经被重写（其中一小段源码就是在逐位比较字符），只要内容相同，返回true，所以equals的结果也为true
