@@ -23,22 +23,7 @@ public boolean equals(Object obj) {
 
 ###### 延伸
 Integer中用到了缓存，在被自动装箱且在[-128,127]之间的情况下,装箱结果是从缓存中取出来的，因此==和equals的结果都是true；
-{% codeblock _title%}
-	//Integer a = 整数; 这种情况都会自动装箱，整数在-128到127之间的时候，
-	//装箱结果都是在缓存中取的，它们指向的都是同一个缓存对象，==结果相同
-	Integer a = 127;
-	Integer b = 127;
-
-	System.out.println(a == b);   //true
-	System.out.println(a.equals(b));   //true
-
-	//不再使用缓存
-	Integer c = 128;
-	Integer d = 128;
-	System.out.println(c == d);  //false
-	System.out.println(c.equals(d));  //true
-{% endcodeblock %}
-```
+``` Java
 	//Integer a = 整数; 这种情况都会自动装箱，整数在-128到127之间的时候，
 	//装箱结果都是在缓存中取的，它们指向的都是同一个缓存对象，==结果相同
 	Integer a = 127;
