@@ -23,36 +23,51 @@ public boolean equals(Object obj) {
 
 ###### 延伸
 Integer中用到了缓存，在被自动装箱且在[-128,127]之间的情况下,装箱结果是从缓存中取出来的，因此==和equals的结果都是true；
-``` Java
-    	//Integer a = 整数; 这种情况都会自动装箱，整数在-128到127之间的时候，
-    	//装箱结果都是在缓存中取的，它们指向的都是同一个缓存对象，==结果相同
-		Integer a = 127;
-		Integer b = 127;
-		
-		System.out.println(a == b);   //true
-		System.out.println(a.equals(b));   //true
-		
-		//不再使用缓存
-		Integer c = 128;
-		Integer d = 128;
-		System.out.println(c == d);  //false
-		System.out.println(c.equals(d));  //true	
+{% codeblock _title%}
+	//Integer a = 整数; 这种情况都会自动装箱，整数在-128到127之间的时候，
+	//装箱结果都是在缓存中取的，它们指向的都是同一个缓存对象，==结果相同
+	Integer a = 127;
+	Integer b = 127;
+
+	System.out.println(a == b);   //true
+	System.out.println(a.equals(b));   //true
+
+	//不再使用缓存
+	Integer c = 128;
+	Integer d = 128;
+	System.out.println(c == d);  //false
+	System.out.println(c.equals(d));  //true
+{% endcodeblock %}
 ```
-String也比较特殊,
+	//Integer a = 整数; 这种情况都会自动装箱，整数在-128到127之间的时候，
+	//装箱结果都是在缓存中取的，它们指向的都是同一个缓存对象，==结果相同
+	Integer a = 127;
+	Integer b = 127;
+
+	System.out.println(a == b);   //true
+	System.out.println(a.equals(b));   //true
+
+	//不再使用缓存
+	Integer c = 128;
+	Integer d = 128;
+	System.out.println(c == d);  //false
+	System.out.println(c.equals(d));  //true	
 ```
-        //"loveu"是字符串常量，存放在常量池里，共用1块内存空间，
-    	//所以foo1和bar1内存地址相同，== 结果为true。
-    	//String类里的equals方法已经被重写（其中一小段源码就是在逐位比较字符），只要内容相同，返回true，所以equals的结果也为true
-        String foo1 = "loveu";  
-        String bar1 = "loveu";  
-        System.out.println(foo1 == bar1);      // 输出为 true  
-        System.out.println(foo1.equals(bar1)); // 输出为 true  
-        
-        //新建2个字符串对象，内存地址不同，内容相同，故结果分别为false和true
-        String foo2 = new String("loveu");  
-        String bar2 = new String("loveu");  
-        System.out.println(foo2 == bar2);      // 输出为 false  
-        System.out.println(foo2.equals(bar2)); // 输出为 true  
+String也比较特殊
+```
+//"loveu"是字符串常量，存放在常量池里，共用1块内存空间，
+//所以foo1和bar1内存地址相同，== 结果为true。
+//String类里的equals方法已经被重写（其中一小段源码就是在逐位比较字符），只要内容相同，返回true，所以equals的结果也为true
+String foo1 = "loveu";  
+String bar1 = "loveu";  
+System.out.println(foo1 == bar1);      // 输出为 true  
+System.out.println(foo1.equals(bar1)); // 输出为 true  
+
+//新建2个字符串对象，内存地址不同，内容相同，故结果分别为false和true
+String foo2 = new String("loveu");  
+String bar2 = new String("loveu");  
+System.out.println(foo2 == bar2);      // 输出为 false  
+System.out.println(foo2.equals(bar2)); // 输出为 true  
 ```
 
 总结来说：

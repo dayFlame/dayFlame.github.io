@@ -7,13 +7,13 @@ title: lzhou的博客
 subtitle: 但行好事，莫问前程
 description: 北京邮电大学11级，研究生在读
 author: lzhou
-language:
-timezone:
+language: 
+timezone: Asia/Shanghai
 
 favicon: /favicon.ico
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://zhoulun.net
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
