@@ -1,7 +1,7 @@
 ---
 title: Integer类的缓存
 date: 2016-11-02 17:07:15
-tags: Java
+tags: [Java,随笔]
 ---
 
 ### 引子

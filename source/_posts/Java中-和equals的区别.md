@@ -1,7 +1,7 @@
 ---
 title: Java中==和equals的区别
 date: 2016-10-31 14:01:40
-tags: Java
+tags: [Java,随笔]
 ---
 
 ### 概述
