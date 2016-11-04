@@ -28,7 +28,7 @@ public boolean equals(Object obj) &amp;#123;
 &amp;#125;
 
 可以看出，原始的equals方法是和==一样的。">
-<meta property="og:updated_time" content="2016-11-04T05:27:27.257Z">
+<meta property="og:updated_time" content="2016-11-04T05:32:32.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中==和equals的区别">
 <meta name="twitter:description" content="概述==是一个关系运算符或者关系操作符，它生成的是一个boolean布尔结果，计算的是操作数的值之间的关系。equals()是一个方法，在Object类中已经实现。1
@@ -230,19 +230,19 @@ public boolean equals(Object obj) &amp;#123;
 <span class="line">11</span>
 <span class="line">12</span>
 <span class="line">13</span>
-</pre></td><td class="code"><pre><span class="line"><span class="comment">//"loveu"是字符串常量，存放在常量池里，共用1块内存空间，</span></span>
+</pre></td><td class="code"><pre><span class="line"><span class="comment">//"bupt"是字符串常量，存放在常量池里，共用1块内存空间，</span></span>
 <span class="line"><span class="comment">//所以foo1和bar1内存地址相同，== 结果为true。</span></span>
 <span class="line"><span class="comment">//String类里的equals方法已经被重写（其中一小段源码就是在逐位比较字符），只要内容相同，返回true，所以equals的结果也为true</span></span>
-<span class="line">String foo1 = <span class="string">"loveu"</span>;  </span>
-<span class="line">String bar1 = <span class="string">"loveu"</span>;  </span>
-<span class="line">System.out.println(foo1 == bar1);      <span class="comment">// 输出为 true  </span></span>
-<span class="line">System.out.println(foo1.equals(bar1)); <span class="comment">// 输出为 true  </span></span>
+<span class="line">String a1 = <span class="string">"bupt"</span>;  </span>
+<span class="line">String b1 = <span class="string">"bupt"</span>;  </span>
+<span class="line">System.out.println(a1 == b1);      <span class="comment">// 输出为 true  </span></span>
+<span class="line">System.out.println(a1.equals(b1)); <span class="comment">// 输出为 true  </span></span>
 <span class="line"></span>
 <span class="line"><span class="comment">//新建2个字符串对象，内存地址不同，内容相同，故结果分别为false和true</span></span>
-<span class="line">String foo2 = <span class="keyword">new</span> String(<span class="string">"loveu"</span>);  </span>
-<span class="line">String bar2 = <span class="keyword">new</span> String(<span class="string">"loveu"</span>);  </span>
-<span class="line">System.out.println(foo2 == bar2);      <span class="comment">// 输出为 false  </span></span>
-<span class="line">System.out.println(foo2.equals(bar2)); <span class="comment">// 输出为 true</span></span>
+<span class="line">String a2 = <span class="keyword">new</span> String(<span class="string">"bupt"</span>);  </span>
+<span class="line">String b2 = <span class="keyword">new</span> String(<span class="string">"bupt"</span>);  </span>
+<span class="line">System.out.println(a2 == b2);      <span class="comment">// 输出为 false  </span></span>
+<span class="line">System.out.println(a2.equals(b2)); <span class="comment">// 输出为 true</span></span>
 </pre></td></tr></table></figure></p>
 <p>总结来说：<br>　　1）对于==，如果作用于基本数据类型的变量(即使比较的双方有一方是基本类型，另一方是包装类型)，则直接比较其存储的 “值”是否相等；<br>　　　　如果作用于引用类型的变量，则比较的是所指向的对象的地址</p>
 <p>　　2）对于equals方法，注意：equals方法不能作用于基本数据类型的变量<br>　　　　如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；<br>　　　　诸如String、Date等类对equals方法进行了重写的话，比较的是所指向的对象的内容。</p>
