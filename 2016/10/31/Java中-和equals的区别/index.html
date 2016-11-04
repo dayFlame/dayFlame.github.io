@@ -28,7 +28,7 @@ public boolean equals(Object obj) &amp;#123;
 &amp;#125;
 
 可以看出，原始的equals方法是和==一样的。">
-<meta property="og:updated_time" content="2016-11-03T09:04:20.277Z">
+<meta property="og:updated_time" content="2016-11-04T05:27:27.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中==和equals的区别">
 <meta name="twitter:description" content="概述==是一个关系运算符或者关系操作符，它生成的是一个boolean布尔结果，计算的是操作数的值之间的关系。equals()是一个方法，在Object类中已经实现。1
@@ -244,7 +244,7 @@ public boolean equals(Object obj) &amp;#123;
 <span class="line">System.out.println(foo2 == bar2);      <span class="comment">// 输出为 false  </span></span>
 <span class="line">System.out.println(foo2.equals(bar2)); <span class="comment">// 输出为 true</span></span>
 </pre></td></tr></table></figure></p>
-<p>总结来说：<br>　　1）对于==，如果作用于基本数据类型的变量，则直接比较其存储的 “值”是否相等；<br>　　　　如果作用于引用类型的变量，则比较的是所指向的对象的地址</p>
+<p>总结来说：<br>　　1）对于==，如果作用于基本数据类型的变量(即使比较的双方有一方是基本类型，另一方是包装类型)，则直接比较其存储的 “值”是否相等；<br>　　　　如果作用于引用类型的变量，则比较的是所指向的对象的地址</p>
 <p>　　2）对于equals方法，注意：equals方法不能作用于基本数据类型的变量<br>　　　　如果没有对equals方法进行重写，则比较的是引用类型的变量所指向的对象的地址；<br>　　　　诸如String、Date等类对equals方法进行了重写的话，比较的是所指向的对象的内容。</p>
 
       
