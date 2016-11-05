@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="http://zhoulun.net">
   <title>Integer类的缓存 | lzhou的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引子1
+  <meta name="description" content="&amp;#x5F15;&amp;#x5B50;1
 2
 3
 4
@@ -29,14 +29,12 @@ System.out.println(a == b);   //true
 
 Integer c = 128;
 Integer d = 128;   
-System.out.println(c == d);   //false
-
-Integer int">
+System.out.println(c == d);   //fals">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Integer类的缓存">
 <meta property="og:url" content="http://zhoulun.net/2016/11/02/Integer类的缓存/index.html">
 <meta property="og:site_name" content="lzhou的博客">
-<meta property="og:description" content="引子1
+<meta property="og:description" content="&amp;#x5F15;&amp;#x5B50;1
 2
 3
 4
@@ -57,13 +55,11 @@ System.out.println(a == b);   //true
 
 Integer c = 128;
 Integer d = 128;   
-System.out.println(c == d);   //false
-
-Integer int">
+System.out.println(c == d);   //fals">
 <meta property="og:updated_time" content="2016-11-03T09:04:35.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Integer类的缓存">
-<meta name="twitter:description" content="引子1
+<meta name="twitter:description" content="&amp;#x5F15;&amp;#x5B50;1
 2
 3
 4
@@ -84,9 +80,7 @@ System.out.println(a == b);   //true
 
 Integer c = 128;
 Integer d = 128;   
-System.out.println(c == d);   //false
-
-Integer int">
+System.out.println(c == d);   //fals">
   
     <link rel="alternative" href="/atom.xml" title="lzhou的博客" type="application/atom+xml">
   
@@ -228,7 +222,7 @@ Integer int">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
+        <h3 id="&#x5F15;&#x5B50;"><a href="#&#x5F15;&#x5B50;" class="headerlink" title="&#x5F15;&#x5B50;"></a>&#x5F15;&#x5B50;</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
 <span class="line">2</span>
 <span class="line">3</span>
 <span class="line">4</span>
@@ -260,24 +254,24 @@ Integer int">
 <span class="line">System.out.println(int3 == int4);  <span class="comment">//false</span></span>
 </pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>jvm为了节省内存，对于下列包装对象的两个实例，当它们的基本值相同时，进行==操作的结果总为true:<br>Boolean,Byte,Character(\u0000 - \u007f,7f是十进制的127),Integer(十进制-128 ~ 127)</p>
-<p>对于上述代码中的前两小段，jvm会对其进行自动装箱，例如实际上，运行代码时，执行了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
+<h3 id="&#x89E3;&#x91CA;"><a href="#&#x89E3;&#x91CA;" class="headerlink" title="&#x89E3;&#x91CA;"></a>&#x89E3;&#x91CA;</h3><p>jvm&#x4E3A;&#x4E86;&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0B;&#x5217;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x7684;&#x4E24;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F53;&#x5B83;&#x4EEC;&#x7684;&#x57FA;&#x672C;&#x503C;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x8FDB;&#x884C;==&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x603B;&#x4E3A;true:<br>Boolean,Byte,Character(\u0000 - \u007f,7f&#x662F;&#x5341;&#x8FDB;&#x5236;&#x7684;127),Integer(&#x5341;&#x8FDB;&#x5236;-128 ~ 127)</p>
+<p>&#x5BF9;&#x4E8E;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x524D;&#x4E24;&#x5C0F;&#x6BB5;&#xFF0C;jvm&#x4F1A;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x88C5;&#x7BB1;&#xFF0C;&#x4F8B;&#x5982;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x6267;&#x884C;&#x4E86;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
 </pre></td><td class="code"><pre><span class="line">Integer a = Integer.valueOf(<span class="number">127</span>);</span>
 </pre></td></tr></table></figure></p>
-<p>在JDK7的Integer类中valueOf()部分源码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
+<p>&#x5728;JDK7&#x7684;Integer&#x7C7B;&#x4E2D;valueOf()&#x90E8;&#x5206;&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
 <span class="line">2</span>
 <span class="line">3</span>
 <span class="line">4</span>
 <span class="line">5</span>
 <span class="line">6</span>
-</pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span>
+</pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">valueOf</span><span class="params">(<span class="keyword">int</span> i)</span> </span>{</span>
 <span class="line">    <span class="keyword">assert</span> IntegerCache.high &gt;= <span class="number">127</span>;</span>
 <span class="line">    <span class="keyword">if</span> (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span>
 <span class="line">        <span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span>
 <span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Integer(i);</span>
-<span class="line">&#125;</span>
+<span class="line">}</span>
 </pre></td></tr></table></figure></p>
-<p>如果数在-128到127之间的话，就会返回一个静态类IntegerCache中的成员变量cache中的一个对象的引用。<br>IntegerCache部分源码如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
+<p>&#x5982;&#x679C;&#x6570;&#x5728;-128&#x5230;127&#x4E4B;&#x95F4;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7C7B;IntegerCache&#x4E2D;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;cache&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;<br>IntegerCache&#x90E8;&#x5206;&#x6E90;&#x7801;&#x5982;&#x4E0B;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
 <span class="line">2</span>
 <span class="line">3</span>
 <span class="line">4</span>
@@ -303,35 +297,35 @@ Integer int">
 <span class="line">24</span>
 <span class="line">25</span>
 <span class="line">26</span>
-</pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerCache</span> </span>&#123;</span>
+</pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerCache</span> </span>{</span>
 <span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> low = -<span class="number">128</span>;</span>
 <span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> high;</span>
 <span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> Integer cache[];</span>
 <span class="line"></span>
-<span class="line">    <span class="keyword">static</span> &#123;</span>
+<span class="line">    <span class="keyword">static</span> {</span>
 <span class="line">        <span class="comment">// high value may be configured by property</span></span>
 <span class="line">        <span class="keyword">int</span> h = <span class="number">127</span>;</span>
 <span class="line">        String integerCacheHighPropValue =</span>
-<span class="line">            sun.misc.VM.getSavedProperty(<span class="string">"java.lang.Integer.IntegerCache.high"</span>);</span>
-<span class="line">        <span class="keyword">if</span> (integerCacheHighPropValue != <span class="keyword">null</span>) &#123;</span>
+<span class="line">            sun.misc.VM.getSavedProperty(<span class="string">&quot;java.lang.Integer.IntegerCache.high&quot;</span>);</span>
+<span class="line">        <span class="keyword">if</span> (integerCacheHighPropValue != <span class="keyword">null</span>) {</span>
 <span class="line">            <span class="keyword">int</span> i = parseInt(integerCacheHighPropValue);</span>
 <span class="line">            i = Math.max(i, <span class="number">127</span>);</span>
 <span class="line">            <span class="comment">// Maximum array size is Integer.MAX_VALUE</span></span>
 <span class="line">            h = Math.min(i, Integer.MAX_VALUE - (-low) -<span class="number">1</span>);</span>
-<span class="line">        &#125;</span>
+<span class="line">        }</span>
 <span class="line">        high = h;</span>
 <span class="line"></span>
 <span class="line">        cache = <span class="keyword">new</span> Integer[(high - low) + <span class="number">1</span>];</span>
 <span class="line">        <span class="keyword">int</span> j = low;</span>
 <span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; cache.length; k++)</span>
 <span class="line">            cache[k] = <span class="keyword">new</span> Integer(j++);</span>
-<span class="line">    &#125;</span>
+<span class="line">    }</span>
 <span class="line"></span>
-<span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">IntegerCache</span><span class="params">()</span> </span>&#123;&#125;</span>
-<span class="line">&#125;</span>
+<span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">IntegerCache</span><span class="params">()</span> </span>{}</span>
+<span class="line">}</span>
 </pre></td></tr></table></figure></p>
-<p>在类加载时就将-128 到 127 的Integer对象创建了，并保存在cache数组中，一旦程序调用valueOf 方法，如果i的值是在-128 到127之间就直接在cache缓存数组中去取Integer对象。所以你不管创建多少个这个范围内的Integer调用ValueOf函数返回的都是同一个对象。</p>
-<h3 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h3><p>Long也有类似的缓存机制，但是无法自行调整参数<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
+<p>&#x5728;&#x7C7B;&#x52A0;&#x8F7D;&#x65F6;&#x5C31;&#x5C06;-128 &#x5230; 127 &#x7684;Integer&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x5728;cache&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x4E00;&#x65E6;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;valueOf &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;i&#x7684;&#x503C;&#x662F;&#x5728;-128 &#x5230;127&#x4E4B;&#x95F4;&#x5C31;&#x76F4;&#x63A5;&#x5728;cache&#x7F13;&#x5B58;&#x6570;&#x7EC4;&#x4E2D;&#x53BB;&#x53D6;Integer&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x4EE5;&#x4F60;&#x4E0D;&#x7BA1;&#x521B;&#x5EFA;&#x591A;&#x5C11;&#x4E2A;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;Integer&#x8C03;&#x7528;ValueOf&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="&#x5EF6;&#x4F38;"><a href="#&#x5EF6;&#x4F38;" class="headerlink" title="&#x5EF6;&#x4F38;"></a>&#x5EF6;&#x4F38;</h3><p>Long&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x81EA;&#x884C;&#x8C03;&#x6574;&#x53C2;&#x6570;<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span>
 <span class="line">2</span>
 <span class="line">3</span>
 <span class="line">4</span>
@@ -349,39 +343,39 @@ Integer int">
 <span class="line">16</span>
 <span class="line">17</span>
 <span class="line">18</span>
-</pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LongCache</span> </span>&#123;</span>
-<span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LongCache</span><span class="params">()</span></span>&#123;&#125;</span>
+</pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LongCache</span> </span>{</span>
+<span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LongCache</span><span class="params">()</span></span>{}</span>
 <span class="line"></span>
 <span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> Long cache[] = <span class="keyword">new</span> Long[-(-<span class="number">128</span>) + <span class="number">127</span> + <span class="number">1</span>];</span>
 <span class="line"></span>
-<span class="line">    <span class="keyword">static</span> &#123;</span>
+<span class="line">    <span class="keyword">static</span> {</span>
 <span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cache.length; i++)</span>
 <span class="line">            cache[i] = <span class="keyword">new</span> Long(i - <span class="number">128</span>);</span>
-<span class="line">    &#125;</span>
-<span class="line">&#125;</span>
+<span class="line">    }</span>
+<span class="line">}</span>
 <span class="line"></span>
-<span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Long <span class="title">valueOf</span><span class="params">(<span class="keyword">long</span> l)</span> </span>&#123;</span>
+<span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Long <span class="title">valueOf</span><span class="params">(<span class="keyword">long</span> l)</span> </span>{</span>
 <span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> offset = <span class="number">128</span>;</span>
-<span class="line">    <span class="keyword">if</span> (l &gt;= -<span class="number">128</span> &amp;&amp; l &lt;= <span class="number">127</span>) &#123; <span class="comment">// will cache</span></span>
+<span class="line">    <span class="keyword">if</span> (l &gt;= -<span class="number">128</span> &amp;&amp; l &lt;= <span class="number">127</span>) { <span class="comment">// will cache</span></span>
 <span class="line">        <span class="keyword">return</span> LongCache.cache[(<span class="keyword">int</span>)l + offset];</span>
-<span class="line">    &#125;</span>
+<span class="line">    }</span>
 <span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Long(l);</span>
-<span class="line">&#125;</span>
+<span class="line">}</span>
 </pre></td></tr></table></figure></p>
-<p>其他包装类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span>
+<p>&#x5176;&#x4ED6;&#x5305;&#x88C5;&#x7C7B;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span>
 <span class="line">2</span>
 <span class="line">3</span>
 <span class="line">4</span>
 <span class="line">5</span>
 <span class="line">6</span>
-</pre></td><td class="code"><pre><span class="line">Byte：(全部缓存)</span>
+</pre></td><td class="code"><pre><span class="line">Byte&#xFF1A;(&#x5168;&#x90E8;&#x7F13;&#x5B58;)</span>
 <span class="line">Character(0 - 127)</span>
-<span class="line">Short(-128 — 127缓存)</span>
-<span class="line">Long(-128 — 127缓存)</span>
-<span class="line">Float(没有缓存)</span>
-<span class="line">Doulbe(没有缓存)</span>
+<span class="line">Short(-128 &#x2014; 127&#x7F13;&#x5B58;)</span>
+<span class="line">Long(-128 &#x2014; 127&#x7F13;&#x5B58;)</span>
+<span class="line">Float(&#x6CA1;&#x6709;&#x7F13;&#x5B58;)</span>
+<span class="line">Doulbe(&#x6CA1;&#x6709;&#x7F13;&#x5B58;)</span>
 </pre></td></tr></table></figure></p>
-<p>垃圾回收器也只会回收非缓存对象</p>
+<p>&#x5783;&#x573E;&#x56DE;&#x6536;&#x5668;&#x4E5F;&#x53EA;&#x4F1A;&#x56DE;&#x6536;&#x975E;&#x7F13;&#x5B58;&#x5BF9;&#x8C61;</p>
 
       
     </div>
