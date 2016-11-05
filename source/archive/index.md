@@ -9,4 +9,5 @@ comments: false
 [Java中==和equals的区别](/2016/10/31/Java中-和equals的区别/index.html)
 
 	
-### Java多线程
+### Java并发编程
+[线程的状态](/2016/11/04/线程的状态/index.html)
