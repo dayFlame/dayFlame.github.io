@@ -1,7 +1,7 @@
 ---
 title: Java多线程的创建
 date: 2016-11-07 16:23:37
-tags: [Java,并发]
+tags: [Java,多线程]
 ---
 
 ### Java多线程的创建以及启动
@@ -108,4 +108,14 @@ public class ThreadTest1 {
 
 通过输出我们知道线程执行体是MyThread1类中的run()方法。这是因为Thread类本身也是实现了Runnable接口，而run()方法最先是在Runnable接口中定义的方法。
 对于Thread(Runnable target ...)，不管传入的Target是否为空，首先都会执行Thread自己的run()方法。如果重写了该方法且该方法中没有super.run()，那么是永远不会调用Runnable实现的run()方法；如果没有重写该方法，则会去判断target是否为空，以此来决定调用target实现的run()方法。
+
+
+### 线程的类型
+java中有两类线程，User Thread(用户线程，或者叫非守护线程)和Daemon Thread(守护线程)。
+当jvm中没有用户线程时，jvm不会理会守护线程有没有在运行，jvm会停止所有守护线程，然后退出jvm。创建线程默认的是用户线程。守护线程可以用来为其他线程提供服务的，比如GC线程。
+在我们的例子中，当main主线程（user thread）结束时，其他线程仍在运行，但是如果将其他线程设置为守护线程，main线程的结束意味着jvm也退出了。
+方法：public final void setDaemon(boolean on) 可以设置线程是否为守护线程，但是必须在start之前调用，否则会抛出IllegalThreadStateException（这点与操作系统中的守护进程有所区别）；
+守护线程中产生的线程也是守护线程；（守护进程fork()出来的子进程不再是守护进程）；
+不是所有的用用都可以被分配到守护线程，如读写操作和计算逻辑等。因为这些操作可能没有完成，虚拟机就退出了；
+方法：public final boolean isDaemon() 可以判断是否是守护线程
 
